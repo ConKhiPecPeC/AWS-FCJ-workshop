@@ -15,6 +15,19 @@
                 href="//localhost:1313/vi/1-introduction/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.1-vpc/</loc>
+    <lastmod>2025-05-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-setup-resource/2.2-create-vpc/2.2.1-vpc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.1-vpc/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/</loc>
     <lastmod>2025-05-21T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -40,9 +53,6 @@
                 hreflang="vi"
                 href="//localhost:1313/vi/2-setup-resource/"
                 />
-  </url><url>
-    <loc>//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.3-gateways/</loc>
-    <lastmod>2025-05-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/vi/2-setup-resource/2.1-create-iam-user-and-iam-role/</loc>
     <lastmod>2025-05-21T00:00:00+00:00</lastmod>
@@ -70,19 +80,6 @@
                 href="//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.2-subnets/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.1-vpc/</loc>
-    <lastmod>2025-05-21T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-setup-resource/2.2-create-vpc/2.2.1-vpc/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.1-vpc/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/2-setup-resource/2.2-create-vpc/</loc>
     <lastmod>2025-05-21T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -108,6 +105,9 @@
                 hreflang="vi"
                 href="//localhost:1313/vi/3-push-image-to-ecr-and-run-ecs-cluster/"
                 />
+  </url><url>
+    <loc>//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.3-gateways/</loc>
+    <lastmod>2025-05-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/vi/4-setup-application-load-balancer/</loc>
     <lastmod>2025-05-21T00:00:00+00:00</lastmod>

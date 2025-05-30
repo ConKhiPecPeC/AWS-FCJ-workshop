@@ -17,10 +17,3 @@ Bạn có thể sử dụng công cụ dòng lệnh (CLI) ưa thích của mình
 Dịch vụ này được tích hợp với cả các công cụ của AWS như **Amazon Elastic Container Registry**, cũng như các công cụ của bên thứ ba như Docker. Sự tích hợp này giúp các nhóm phát triển tập trung vào việc xây dựng ứng dụng, thay vì phải lo lắng về môi trường vận hành. Bạn có thể chạy và mở rộng khối lượng công việc container của mình trên các vùng (Region) của AWS trong đám mây hoặc tại chỗ (on-premises) mà không cần phải quản lý mặt phức tạp của một mặt phẳng điều khiển (control plane). 
    ![ECS](/images/1-Introduction/0003_ECS_icon.png)
 
-**Amazon Route 53** là dịch vụ web Hệ thống tên miền (DNS) có khả năng mở rộng và tính khả dụng cao. Bạn có thể sử dụng Route 53 để thực hiện ba chức năng chính theo bất kỳ sự kết hợp nào: đăng ký tên miền, định tuyến DNS và kiểm tra tình trạng.
-Các tính năng của Route53
-- Route 53 Resolver
-- Amazon Route 53 Resolver trên Outposts
-- Tường lửa DNS Route 53 Resolver
-- Traffic Flow
-- Amazon Route 53 Profiles

@@ -12,21 +12,21 @@
     <title>Tạo các Security Group :: Tạo mới tài khoản AWS</title>
 
     
-    <link href="/css/nucleus.css?1748596438" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1748596438" rel="stylesheet">
-    <link href="/css/hybrid.css?1748596438" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1748596438" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1748596438" rel="stylesheet">
-    <link href="/css/auto-complete.css?1748596438" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1748596438" rel="stylesheet">
-    <link href="/css/theme.css?1748596438" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1748596438" rel="stylesheet">
+    <link href="/css/nucleus.css?1748598473" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1748598473" rel="stylesheet">
+    <link href="/css/hybrid.css?1748598473" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1748598473" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1748598473" rel="stylesheet">
+    <link href="/css/auto-complete.css?1748598473" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1748598473" rel="stylesheet">
+    <link href="/css/theme.css?1748598473" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1748598473" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1748596438" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1748598473" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1748596438"></script>
+    <script src="/js/jquery-3.3.1.min.js?1748598473"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1748596438"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1748596438"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1748598473"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1748598473"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1748596438"></script>
+<script type="text/javascript" src="/js/search.js?1748598473"></script>
 
     
   </div>
@@ -503,7 +503,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>26-11-2023</font></i>
+        <i><font color=orange>30-5-2025</font></i>
     </left>
     <left>
         <br>
@@ -607,7 +607,46 @@
 
 
 	<h4 id="tạo-public-security-group">Tạo public Security Group</h4>
+<ol>
+<li>Tại <strong>VPC Dashboard</strong> chọn <strong>Security Group</strong> chọn <strong>Create security group</strong>
+<img src="/images/2-Setup-Resource/2.2-CreateVPC/2.2.4-SecurityGroup/0001-VPCDashboard.png" alt="VPC Dashboard"></li>
+<li>Tại trang <strong>Create security group</strong>
+<ul>
+<li><strong>Security group name</strong> điền <strong>Public-SG</strong></li>
+<li><strong>Description</strong> điền <strong>Allows HTTP and HTTPs</strong></li>
+<li><strong>VPC</strong> chọn VPC đã tạo
+<img src="/images/2-Setup-Resource/2.2-CreateVPC/2.2.4-SecurityGroup/0002-PublicSG.png" alt="Public SG"></li>
+</ul>
+</li>
+<li>Cấu hình <strong>Inbound rules</strong>
+Chọn <strong>Add rule</strong>
+<ul>
+<li>Type <strong>HTTP</strong> Source <strong>Anywhere-IPv4</strong></li>
+<li>Type <strong>HTTP</strong> Source <strong>Anywhere-IPv6</strong></li>
+<li>Type <strong>HTTPS</strong> Source <strong>Anywhere-IPv4</strong></li>
+<li>Type <strong>HTTPS</strong> Source <strong>Anywhere-IPv6</strong>
+Kéo xuống và chọn <strong>Create security group</strong>s
+<img src="/images/2-Setup-Resource/2.2-CreateVPC/2.2.4-SecurityGroup/0003-PublicSG.png" alt="Public SG"></li>
+</ul>
+</li>
+</ol>
 <h4 id="tạo-private-security-group">Tạo private Security Group</h4>
+<ol>
+<li>Tại <strong>VPC Dashboard</strong> chọn <strong>Security Group</strong> chọn <strong>Create security group</strong>
+<img src="/images/2-Setup-Resource/2.2-CreateVPC/2.2.4-SecurityGroup/0004-VPCDashboard.png" alt="VPC Dashboard"></li>
+<li>Tại trang <strong>Create security group</strong>
+<ul>
+<li><strong>Security group name</strong> điền <strong>Private-SG</strong></li>
+<li><strong>Description</strong> điền <strong>Allows TCP port 8080</strong></li>
+<li><strong>VPC</strong> chọn VPC đã tạo
+Cấu hình <strong>Inbound rules</strong></li>
+<li>Chọn <strong>Add rule</strong></li>
+<li>Type <strong>Custom TCP</strong> Port range <strong>8080</strong> Source <strong>Custom</strong> chọn <strong>Secutiry group</strong> chọn <strong>Public-SG</strong> đã tạo ở trên</li>
+<li>Kéo xuống và chọn <strong>Create security group</strong>
+<img src="/images/2-Setup-Resource/2.2-CreateVPC/2.2.4-SecurityGroup/0005-Private-SG.png" alt="Public SG"></li>
+</ul>
+</li>
+</ol>
 
 
 
@@ -876,19 +915,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1748596438"></script>
-    <script src="/js/perfect-scrollbar.min.js?1748596438"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1748596438"></script>
-    <script src="/js/jquery.sticky.js?1748596438"></script>
-    <script src="/js/featherlight.min.js?1748596438"></script>
-    <script src="/js/highlight.pack.js?1748596438"></script>
+    <script src="/js/clipboard.min.js?1748598473"></script>
+    <script src="/js/perfect-scrollbar.min.js?1748598473"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1748598473"></script>
+    <script src="/js/jquery.sticky.js?1748598473"></script>
+    <script src="/js/featherlight.min.js?1748598473"></script>
+    <script src="/js/highlight.pack.js?1748598473"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1748596438"></script>
-    <script src="/js/learn.js?1748596438"></script>
-    <script src="/js/hugo-learn.js?1748596438"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1748598473"></script>
+    <script src="/js/learn.js?1748598473"></script>
+    <script src="/js/hugo-learn.js?1748598473"></script>
 
-    <link href="/mermaid/mermaid.css?1748596438" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1748596438"></script>
+    <link href="/mermaid/mermaid.css?1748598473" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1748598473"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

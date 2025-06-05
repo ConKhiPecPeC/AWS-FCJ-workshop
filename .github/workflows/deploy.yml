@@ -1,11 +1,9 @@
-# .github/workflows/deploy.yml
-
 name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # hoặc branch bạn đang dùng làm default
+      - main
 
 jobs:
   deploy:
@@ -14,11 +12,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.124.1'  # dùng đúng phiên bản Hugo bạn cần
+          hugo-version: '0.147.0'
 
       - name: Build Hugo site
         run: hugo --minify

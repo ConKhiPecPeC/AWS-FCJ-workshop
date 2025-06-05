@@ -15,6 +15,9 @@
                 href="//localhost:1313/vi/1-introduction/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/3-push-image-to-ecr-and-run-ecs-cluster/3.1-push-image-to-ecr/</loc>
+    <lastmod>2025-05-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.1-vpc/</loc>
     <lastmod>2025-05-21T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -80,6 +83,9 @@
                 href="//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.2-subnets/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/3-push-image-to-ecr-and-run-ecs-cluster/3.2-create-ecs-cluster/</loc>
+    <lastmod>2025-05-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/vi/2-setup-resource/2.2-create-vpc/</loc>
     <lastmod>2025-05-21T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -93,6 +99,9 @@
                 href="//localhost:1313/vi/2-setup-resource/2.2-create-vpc/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.3-gateways/</loc>
+    <lastmod>2025-05-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/vi/3-push-image-to-ecr-and-run-ecs-cluster/</loc>
     <lastmod>2025-05-21T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -105,9 +114,6 @@
                 hreflang="vi"
                 href="//localhost:1313/vi/3-push-image-to-ecr-and-run-ecs-cluster/"
                 />
-  </url><url>
-    <loc>//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.3-gateways/</loc>
-    <lastmod>2025-05-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/vi/2-setup-resource/2.2-create-vpc/2.2.4-securitygroup/</loc>
     <lastmod>2025-05-21T00:00:00+00:00</lastmod>
@@ -140,8 +146,6 @@
                 hreflang="vi"
                 href="//localhost:1313/vi/5-cleanupresource/"
                 />
-  </url><url>
-    <loc>//localhost:1313/vi/3-push-image-to-ecr-and-run-ecs-cluster/3.1-push-image-to-ecr/</loc>
   </url><url>
     <loc>//localhost:1313/vi/categories/</loc>
     <xhtml:link

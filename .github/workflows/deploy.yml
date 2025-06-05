@@ -13,7 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          persist-credentials: false
+            submodules: true
+            persist-credentials: false
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2

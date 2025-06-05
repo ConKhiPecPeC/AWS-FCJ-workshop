@@ -14,3 +14,4 @@ pre : " <b> 2. </b> "
 
 1.  [Tạo IAM user và IAM role](/2-Setup-Resource/2.1-Create-IAM-user-and-IAM-role/)
 2.  [Tạo VPC](/2-Setup-Resource/2.2-Create-VPC/)
+      

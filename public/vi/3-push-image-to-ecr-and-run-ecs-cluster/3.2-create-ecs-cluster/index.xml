@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tạo và run task với ECS cluster on Tạo mới tài khoản AWS</title>
-    <link>//localhost:1313/vi/3-push-image-to-ecr-and-run-ecs-cluster/</link>
+    <link>//localhost:1313/vi/3-push-image-to-ecr-and-run-ecs-cluster/3.2-create-ecs-cluster/</link>
     <description>Recent content in Tạo và run task với ECS cluster on Tạo mới tài khoản AWS</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="//localhost:1313/vi/3-push-image-to-ecr-and-run-ecs-cluster/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/vi/3-push-image-to-ecr-and-run-ecs-cluster/3.2-create-ecs-cluster/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

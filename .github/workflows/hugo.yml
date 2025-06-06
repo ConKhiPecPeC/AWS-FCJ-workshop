@@ -32,6 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.147.0
+      REPO_NAME: AWS-FCJ-workshop
     steps:
       - name: Install Hugo CLI
         run: |
@@ -48,6 +49,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Replace ImageUrl
+        run: |
+          find ./content -type f -name "_index.md" -exec sed -i "s|/images/|/${REPO_NAME}/images/|g" {} +
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
@@ -55,7 +59,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://conkhipecpec.github.io/AWS-FCJ-workshop/"
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

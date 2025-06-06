@@ -4,7 +4,8 @@ ignoreLogs = ['warning-goldmark-raw-html']
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
-
+relativeURLs = true
+canonifyURLs = true
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "workshop"

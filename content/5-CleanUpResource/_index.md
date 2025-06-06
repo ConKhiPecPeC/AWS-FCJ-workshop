@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5. </b> "
 ---
 
-# Resource Cleanup
+Resource Cleanup
 
 #### 1. Delete Application Load Balancer and Target Group
 - **Delete the Application Load Balancer**

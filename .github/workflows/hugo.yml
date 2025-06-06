@@ -51,7 +51,7 @@ jobs:
       - name: Replace ImageUrl
         run: |
           find ./content -type f -name "_index.md" -exec sed -i 's/\/images\//\/AWS-FCJ-workshop\/images\//g' {} +
-          find ./content -type f -name "_index.vi.md" -exec sed -i 's/\/static\//\/AWS-FCJ-workshop\/static\//g' {} +
+          find ./content -type f -name "_index.vi.md" -exec sed -i 's/\/images\//\/AWS-FCJ-workshop\/images\//g' {} +
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules

@@ -1,0 +1,106 @@
+[
+{
+	"uri": "//localhost:1313/2-setup-resource/2.2-create-vpc/2.2.1-vpc/",
+	"title": "Create VPC",
+	"tags": [],
+	"description": "",
+	"content": "Tạo VPC hỗ trợ dual-stack In the AWS Management Console search for VPC Click Create VPC In Create VPC Choose VPC only Name tag type my-dual-vpc IPv4 CIDR type 10.0.0.0/16 IPv6 CIDR block choose Amazon-provided IPv6 CIDR block Scroll down and click Create VPC "
+},
+{
+	"uri": "//localhost:1313/",
+	"title": "Deploy application with ECS Fargate and VPC Dualstack",
+	"tags": [],
+	"description": "",
+	"content": "Deploy application with ECS Fargate and VPC dual-stack Deploy application with ECS cluster using VPC Dualstack and use ECR to archive images.\nArchitecture Table of contents Introduction Create ResourceResource Push image to ECR and run ECS cluster Configure Application Load Balancer Clean up resources "
+},
+{
+	"uri": "//localhost:1313/1-introduction/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "VPC Dual Stack An increasing number of organizations are adopting IPv6 in their environments due to the exhaustion of the public IPv4 space, the scarcity of private IPv4 addresses—especially in large-scale networks—and the need to provide services accessible to IPv6-only clients. An intermediate step toward full IPv6 support is the design of an IPv4/IPv6 dual-stack architecture, which leverages both versions of the IP protocol simultaneously. Amazon Elastic Container Registry (Amazon ECR) is an AWS managed container image registry service that is secure, scalable, and reliable. Amazon ECR supports private repositories with resource-based permissions using AWS IAM. This is so that specified users or Amazon EC2 instances can access your container repositories and images. You can use your preferred CLI to push, pull, and manage Docker images, Open Container Initiative (OCI) images, and OCI compatible artifacts. Amazon Elastic Container Service (Amazon ECS) is a fully managed container orchestration service that helps you easily deploy, manage, and scale containerized applications. As a fully managed service, Amazon ECS comes with AWS configuration and operational best practices built-in. It\u0026rsquo;s integrated with both AWS tools, such as Amazon Elastic Container Registry, and third-party tools, such as Docker. This integration makes it easier for teams to focus on building the applications, not the environment. You can run and scale your container workloads across AWS Regions in the cloud, and on-premises, without the complexity of managing a control plane. "
+},
+{
+	"uri": "//localhost:1313/2-setup-resource/2.1-create-iam-user-and-iam-role/",
+	"title": "Create IAM user and IAM role",
+	"tags": [],
+	"description": "",
+	"content": "Create IAM user Create a user and grant permissions to push images from your local machine to ECR.\nLog in to the IAM Management Console In the left sidebar, select Users then click Create user On Specify user details Type User name: ECR_admin Click Next On Set permissions Under Permissions options choose Attach policies directly In Permissions policies search fo AmazonEC2ContainerRegistryFullAccess and select it Then click Next On Review and create Click Create User Return to the IAM Management Console and select the newly created user Create an access key On the user\u0026rsquo;s management page, go to Security credentials Under Access Key click Create access key On the Access key best practices \u0026amp; alternatives in Use case choose Command Line Interface (CLI) Scroll down, check the Confirmation click Next Click Create access key Download the access key Choose Download .csv file or copy Access Key and Secret access key and store them in a secure text editor like Notepad Click Done Create IAM role Return to the IAM Management Console In the left sidebar select Role then click Create Role On Select trusted entity Under Trusted entity type choose AWS Service Scroll down to the Use case Enter Elastic Container Service in Service or use case Choose Elastic Container Service Task click Next In the Add permissions Search for AmazonECSTaskExecutionRolePolicy Check the policy and click Next In the Name, review, and create In Role name type ECS-TaksExecute Scroll down and click Create Role "
+},
+{
+	"uri": "//localhost:1313/2-setup-resource/2.2-create-vpc/2.2.2-subnets/",
+	"title": "Create Subnets",
+	"tags": [],
+	"description": "",
+	"content": "Create public subnet In the VPC Dashboard choose Subnets from the left panel then click Create subnet In the Create Subnet VPC ID Select the VPC you just created Subnet name type public-subnet-1a Availability Zone choose us-east-1a IPv4 subnet CIDR block type 10.0.0.0/24 IPv6 subnet CIDR block type 2600:1f18:7004:7800::/64 Choose Create Subnet Repeat the process with public-subnet-1b Subnet name type public-subnet-1b Availability Zone choose us-east-1b IPv4 subnet CIDR block type 10.0.1.0/24 IPv6 subnet CIDR block type 2600:1f18:7004:7801::/64 Create private subnet In the VPC Dashboard choose Subnets from the left panel choose Create subnet In the Create Subnet VPC ID choose VPC you just create Subnet name type private-subnet-1a Availability Zone choose us-east-1a IPv4 subnet CIDR block type 10.0.2.0/24 IPv6 subnet CIDR block type 2600:1f18:7004:7802::/64 choose Create Subnet Repeat the process with private-subnet-1b Subnet name type privateprivate-subnet-1b Availability Zone choose us-east-1b IPv4 subnet CIDR block type 10.0.3.0/24 IPv6 subnet CIDR block type 2600:1f18:7004:7803::/64 To implement a Multi-AZ setup, each Availability Zone should have one public and one private subnet. You can use multiple AZs within a region depending on your needs and use case.\n"
+},
+{
+	"uri": "//localhost:1313/2-setup-resource/2.2-create-vpc/",
+	"title": "Create VPC and other resource",
+	"tags": [],
+	"description": "",
+	"content": "Create VPC, subnet, gateways and configure Route Table Create VPC Create subnets Create gateways Create Security Group Configure Route Table "
+},
+{
+	"uri": "//localhost:1313/2-setup-resource/",
+	"title": "Preparation",
+	"tags": [],
+	"description": "",
+	"content": "Create required resources Create IAM user accounts and IAM roles to push images from local to ECR and IAM roles to run tasks in ECS cluster Create Security Group for public subnet and Private subnet Create VPC, subnet and gateways Create IAM user and IAM role Create VPC "
+},
+{
+	"uri": "//localhost:1313/2-setup-resource/2.2-create-vpc/2.2.3-gateways/",
+	"title": "Create gateways",
+	"tags": [],
+	"description": "",
+	"content": "Internet gateways In the VPC Dashboard choose Internet gateways Name tag type dual-vpc-igw In the Internet gateways choose interet gateway just create In Action choose Attach to VPC Choose VPC you just create then choose Attach internet gateway NAT gateways In the VPC Dashboard choose Elastic IPs choose Allocate Elastic IP address In the Allocate Elastic IP address choose Allocate Quay lại VPC Dashboard choose NAT gateways then choose Create NAT gateway In the Create NAT gateways Name type dual-vpc-ngw Subnet choose public-subnet-1a Connectivity type choose public Elastic IP allocation ID choose IP you just create choose Create NAT gateway Egress only internet gateways In the VPC Dashboard choose Egress only internet gateways choose Create egress only internet gateways In the Create egress only internet gateway Name type dual-vpc-egw VPC choose VPC you just create choose Create egress only internet gateway "
+},
+{
+	"uri": "//localhost:1313/3-push-image-to-ecr-and-run-ecs-cluster/",
+	"title": "Tạo và run task với ECS cluster",
+	"tags": [],
+	"description": "",
+	"content": "Tiến hành push image từ local lên ECR sau đó tạo cụm ECS và cấu hình các Task definition để chạy trên Fargate\nPush image từ local lên ECR Tạo ECS cluster và set up Task definition "
+},
+{
+	"uri": "//localhost:1313/4-setup-application-load-balancer/",
+	"title": "Account Authentication Support",
+	"tags": [],
+	"description": "",
+	"content": "Content:\nCheck the information Create a support case with AWS Support During the AWS account creation process, at the contact phone number verification step, sometimes there will be a situation where no SMS or calls from AWS will be received. In that case, follow these steps to complete the account information verification:\nCheck the information First, double-check your account information and make sure it\u0026rsquo;s entered correctly:\nYou have entered the phone number information and selected the correct international area code to receive the call. If you use a mobile phone, check your phone to make sure you are still within range to receive calls. Payment method information has been entered correctly. Make sure that the phone number you provide in your AWS account is reachable.\nCreate a support case with AWS Support After checking that the information is correct but still has not received the verification call, AWS Support will assist you to activate your account manually.\nGo to the AWS Support console, select Create case. Select Account and billing support and enter the support information: Type: select Account. Category: select Activation. Subject: briefly write down your situation (eg Did not receive an SMS message or call for verification) Description: Provide details of the situation encountered and information about the time you need support to activate the account. Attachments: Attach an image describing the authentication step you are facing. Under Contact options, select Chat under Contact methods. Select Submit. 5. The AWS Support team will contact and assist in activating your account.\nYou can create a support request with AWS Support even if your account is not activated.\n"
+},
+{
+	"uri": "//localhost:1313/2-setup-resource/2.2-create-vpc/2.2.4-securitygroup/",
+	"title": "Create Security Group",
+	"tags": [],
+	"description": "",
+	"content": "Create public Security Group In the VPC Dashboard choose Security Group choose Create security group In the Create security group Security group name type Public-SG Description type Allows HTTP and HTTPs VPC choose VPC just create Configure Inbound rules Choose Add rule Type HTTP Source Anywhere-IPv4 Type HTTP Source Anywhere-IPv6 Type HTTPS Source Anywhere-IPv4 Type HTTPS Source Anywhere-IPv6 Scroll down and choose Create security group Create private Security Group In theVPC Dashboard choose Security Group choose Create security group In the Create security group Security group name type Private-SG Description type Allows TCP port 8080 VPC choose VPC just create Configure Inbound rules Choose Add rule Type Custom TCP Port range 8080 Source Custom choose Secutiry group choose Public-SG just create above Scroll down and choose Create security group "
+},
+{
+	"uri": "//localhost:1313/2-setup-resource/2.2-create-vpc/2.2.5-routetable/",
+	"title": "Configure Route Table",
+	"tags": [],
+	"description": "",
+	"content": "Public Route Table In the VPC Dashboard choose Route table choose Create route table In the Create route table Name type public-route VPC choose VPC just create Choose Create route table\nChoose route table just create and choose Edit route Choose Add route Create 2 route to route to Internet Gateway and Egress only internet gateway Destionation 0.0.0.0/24 Target Internet Gateway - igw-09881de6e00fff886 Destination ::/0 Target Egress Only Internet Gateway - eigw-0cfa00385fe41e2a3 Choose Save change to save Choose public-route just create choose Action choose Edit subnet associations Choose public-subnet-1a and public-subnet-1b then choose Save Associations Private Route Table In the VPC Dashboard choose Route table choose Create route table In the Create route table Name type private-route VPC choose VPC just create Choose Create route table Choose route table just create Create choose Edit route Choose route table just create then choose Edit route Create route to route to NAT gateway Choose Add route Destionation 0.0.0.0/0 Target NAT Gateway - nat-00f40babba2f71fa4 Choose Save change to save Choose public-route just create choose Action choose Edit subnet associations Choose public-subnet-1a and public-subnet-1b then choose Save Associations "
+},
+{
+	"uri": "//localhost:1313/5-cleanupresource/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

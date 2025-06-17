@@ -20,7 +20,6 @@ Choose **Add rule**
     - Type **HTTP** Source **Anywhere-IPv6**
     - Type **HTTPS** Source **Anywhere-IPv4**
     - Type **HTTPS** Source **Anywhere-IPv6**
-
 Scroll down and choose **Create security group**
     ![Public SG](/images/2-Setup-Resource/2.2-CreateVPC/2.2.4-SecurityGroup/0003-PublicSG.png)
 

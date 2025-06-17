@@ -11,7 +11,7 @@ Push image from local to ECR to manage and archive
 2. On the left pannel in the **Private repositories** choose **Repositories** then choose **Create repositories**
     ![Create Repositories](/images/3-Push-image-to-ECR-and-run-ECS-cluster/3.1-Push-image-to-ECR/0002-CreateRepo.png)
 3. In the **Create private repository**
-    - Type **Repositories name** : **fcj-my-repo**
+    - Type **Repositories name**: **fcj-my-repo**
     - Kéo xuống and click **Create**
     ![Create Repositories](/images/3-Push-image-to-ECR-and-run-ECS-cluster/3.1-Push-image-to-ECR/0003-CreateRepo.png)
 4. Push image from local to **ECR**

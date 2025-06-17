@@ -43,26 +43,32 @@ Dọn dẹp tài nguyên
   - Tại thanh điều hướng bên trái chọn **NAT gateways**
   - Chọn **NAT gateways** liên quan tới bài **dual-vpc-ngw** 
   - Chọn **Action** chọn **Delete NAT gateway**
-  - Nhập **delete** rồi chọn **Delele** 
- - Xóa Internet gateways
-   - Truy cập **VPC Management Console** 
-   - Tại thanh điều hướng bên trái chọn **Internet gateways** 
-   - Chọn **Internet gateways** liên quan tới bài **dual-vpc-igw**
-   - Chọn **Action** chọn **Detach from VPC** rồi chọn **Detach internet gateway**
-   - Chọn **Action** chọn **Delete internet gateway** 
-   - Nhập **delete** chọn **Delete internet gateway**
- - Xóa Egress only internet gateways
-   - Truy cập **VPC Management Console** 
-   - Tại thanh điều hướng bên trái chọn **Egress-only internet gateways**
-   - Chọn **Egress only internet gateways** liên quan tới bài **dual-vpc-egw**
-   - Chọn **Action** chọn **Delete egress only internet gateway**
-   - Nhập **delete** chọn **Delete egress only internet gateway**
- - Xóa VPC 
-   - Truy cập **VPC Management Console**
-   - Tại thanh điều hướng bên trái chọn **Your VPCs**
-   - Chọn **VPC** liên quan đến bài **my-dual-vpc**
-   - Chọn **Action** chọn **Delete VPC**
-   - Nhập **delete** chọn **Delete**
+  - Nhập **delete** rồi chọn **Delele**
+- Giả phóng Elastic IP Addresses
+  - Truy cập **VPC Management Console** 
+  - Tại thanh điều hướng bên trái chọn **Elastic IPs**
+  - Chọn **Elastic IPs** đã tạo 
+  - Chọn **Action** chọn **Release Elastic IP addresses**
+  - Chọn **Release**
+- Xóa Internet gateways
+  - Truy cập **VPC Management Console** 
+  - Tại thanh điều hướng bên trái chọn **Internet gateways** 
+  - Chọn **Internet gateways** liên quan tới bài **dual-vpc-igw**
+  - Chọn **Action** chọn **Detach from VPC** rồi chọn **Detach internet gateway**
+  - Chọn **Action** chọn **Delete internet gateway** 
+  - Nhập **delete** chọn **Delete internet gateway**
+- Xóa Egress only internet gateways
+  - Truy cập **VPC Management Console** 
+  - Tại thanh điều hướng bên trái chọn **Egress-only internet gateways**
+  - Chọn **Egress only internet gateways** liên quan tới bài **dual-vpc-egw**
+  - Chọn **Action** chọn **Delete egress only internet gateway**
+  - Nhập **delete** chọn **Delete egress only internet gateway**
+- Xóa VPC 
+  - Truy cập **VPC Management Console**
+  - Tại thanh điều hướng bên trái chọn **Your VPCs**
+  - Chọn **VPC** liên quan đến bài **my-dual-vpc**
+  - Chọn **Action** chọn **Delete VPC**
+  - Nhập **delete** chọn **Delete**
 
 {{% notice tip %}}
 Khi xóa VPC, AWS sẽ tự động xóa các tài nguyên liên quan như: Subnets, Route Table, Security Group và Internet Gateways
